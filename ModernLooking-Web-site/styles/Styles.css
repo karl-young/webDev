@@ -13,15 +13,24 @@ body {
     background-color: var(--gray);
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS',
       sans-serif;
+      color: var(--white);
   }
 
-header {
-    background-color: var(--purple);
-    padding: 2em;
-    margin: 40px;
+.nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 10px 0 10px;
+    background-color: var(--green);
+}
+.nav h2 {
+    font-size: 2em;
+}
+.nav a {
+    color: var(--white);
 }
 header h1 {
-    font-size: 4em;
+    font-size: 6em;
     display: flex;
     justify-content: center;
     color: var(--white);
