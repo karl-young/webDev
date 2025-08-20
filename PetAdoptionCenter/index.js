@@ -7,6 +7,7 @@ let pets = [
 ]
 
 function displayPet(pet) {
+  let cssClass = pet.adopted ? 'pet adopted' : 'pet available'
   let html = `<section>
              <h2>Pet name is ${pet.name}</h2>
              <p>Type of pet: ${pet.type}</p>
@@ -16,13 +17,22 @@ function displayPet(pet) {
   return html
 }
 
-let cssClass = pet.adopted ? 'pet adopted' : 'pet available'
 
 function showAllPets() {
   let html = ''
-  let container = document.getElementById(pet - list)
-  for (const pet in pets) {
-    html += displayPet(pet)
+  let container = document.getElementById("pet - list")
+  for(i = 0; i < pets.length; i++) {
+    html += displayPet(pets[i])
   }
-  container.innerHTML()
+ container.innerHTML(html)
 }
+
+function adoptPet(){
+  for(i = 0; i < pets.length; i++){
+    pets[i].adopted = true
+  }
+  showAllPets()
+}
+
+showAllPets();
+adoptPet("Garfield");
