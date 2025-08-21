@@ -1,0 +1,12 @@
+body {
+    background: linear-gradient(to bottom, #0b0c10, #1f2833);
+    color: #ffffff;
+    line-height: 1.6;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.output {
+    min-width: 340px;
+}

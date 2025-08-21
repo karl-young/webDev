@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>My Quiz</title>
+</head>
+<body>
+    <h1>My Awesome Quiz</h1>
+    <form id="quiz-form">
+        <!-- Add your questions here -->
+         <fieldset class="fieldset-question">
+            <legend>Q1: What does CPU stand for?</legend>
+        <label for="q1-cpu">Type your answer:</label><br>
+        <input type="text" id="q1-cpu" name="question1">
+    </fieldset>
+    <fieldset class="fieldset-question">
+        <legend>Q2: What is another name for RAM?</legend>
+        <label for="q2-Ram">Select an answer:</label>
+        <ul>
+            <li>
+                <label for="q2-storage">
+                <input type="radio" id="q2-storage" name="q2" value="Storage">
+                Storage
+            </label>
+            </li>
+            <li>
+                <label for="q2-memory">
+                <input type="radio" id="q2-memory" name="q2" value="Memory">
+                Memory
+            </label>
+            </li>
+            <li>
+                <label for="q2-cpu">
+                <input type="radio" id="q2-cpu" name="q2" value="CPU">
+                CPU
+            </label>
+            </li>
+        </ul>
+    </fieldset>
+    <fieldset class="fieldset-question">
+        <legend>Q3: What is the brain of the computer?</legend>
+        <label for="Q3-Brain">Choose two answers:</label>
+        <ul>
+            <li>
+                <label for="Q3-keyboard">
+                <input type="checkbox" id="Q3-keyboard" name="question3" value="Keyboard">
+                Keyboard
+            </label>
+            </li>
+            <li>
+                <label for="Q3-theUser">
+                <input type="checkbox" id="Q3-theUser" name="question3" value="TheUser">
+                The User
+            </label>
+            </li>
+            <li>
+                <label for="Q3-cpu">
+                <input type="checkbox" id="Q3-cpu" name="question3" value="CPU">
+                CPU
+            </label>
+            </li>
+            <li>
+                <label for="Q3-monitor">
+                    <input type="checkbox" id="Q3-monitor" name="question3" value="Monitor">
+                    Monitor
+                </label>
+            </li>
+            <li>
+                <label for="Q3-centralPU">
+                <input type="checkbox" id="Q3-centralPU" name="question3" value="CentralPU">
+                Central Processing Unit
+            </label>
+            </li>
+        </ul>
+    </fieldset>
+    <fieldset class="fieldset-question">
+        <legend>Q4: What is used to store files on a computer?</legend>
+        <label for="Q4-Disk">Type your answer:</label><br>
+        <input type="text" id="Q4-Disk" name="question4">
+    </fieldset>
+    <fieldset class="fieldset-question">
+        <legend>Q5: what does "IP address" stand for?</legend>
+        <label for="Q5-IP">Choose an answer</label>
+        <select id="Q5-IP" name="question5">
+            <option value="InternalPort">Internal Port</option>
+            <option value="InternetProtocol">Internet Protocol</option>
+            <option value="InstantProgram">Instant Program</option>
+            <option value="InputProcess">Input Process</option>
+        </select>
+    </fieldset>
+        
+        <button type="submit" id="submit-btn">Check Answers</button>
+    </form>
+    <div id="results"></div>
+    
+    <!-- Attach your script here -->
+    <script src="script.js" defer></script>
+
+
+    <section class="output">
+        <fieldset>
+            <legend>How you did:</legend>
+            <div id="output"></div>
+        </fieldset>
+    </section>
+</body>
+</html>
