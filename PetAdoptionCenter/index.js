@@ -8,31 +8,32 @@ let pets = [
 
 function displayPet(pet) {
   let cssClass = pet.adopted ? 'pet adopted' : 'pet available'
-  let html = `<section>
+  let html = `<div class="${cssClass}">
              <h2>Pet name is ${pet.name}</h2>
              <p>Type of pet: ${pet.type}</p>
              <p>Pets age: ${pet.age}</p>
              <p>Adopted status: ${pet.adopted}</p>
-             </section>`
+             </div>`
   return html
 }
 
-
 function showAllPets() {
   let html = ''
-  let container = document.getElementById("pet - list")
-  for(i = 0; i < pets.length; i++) {
+  let container = document.getElementById("pet-list")
+  for (let i = 0; i < pets.length; i++) {
     html += displayPet(pets[i])
   }
- container.innerHTML(html)
+  container.innerHTML = html
 }
 
-function adoptPet(){
-  for(i = 0; i < pets.length; i++){
-    pets[i].adopted = true
+function adoptPet(pet) {
+  for (let i = 0; i < pets.length; i++) {
+    if (pets[i].name === pet) {
+      pets[i].adopted = true
+    }
   }
   showAllPets()
 }
 
-showAllPets();
-adoptPet("Garfield");
+showAllPets()
+adoptPet('Garfield')
