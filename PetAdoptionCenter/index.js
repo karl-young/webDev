@@ -19,7 +19,7 @@ function displayPet(pet) {
 
 function showAllPets() {
   let html = ''
-  let container = document.getElementById("pet-list")
+  let container = document.getElementById('pet-list')
   for (let i = 0; i < pets.length; i++) {
     html += displayPet(pets[i])
   }
@@ -29,11 +29,11 @@ function showAllPets() {
 function adoptPet(pet) {
   for (let i = 0; i < pets.length; i++) {
     if (pets[i].name === pet) {
-      pets[i].adopted = true
+      pets[i].adopted = !pets[i].adopted
     }
   }
   showAllPets()
 }
 
 showAllPets()
-adoptPet('Garfield')
+adoptPet('Nibbles')
